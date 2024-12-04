@@ -1,0 +1,52 @@
+@import "./_styles/utilities/all";
+
+$image-multiplier: 10;
+$image-proportion: calc($large * $image-multiplier);
+
+.Home {
+  width: 100%;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: rem-calc($large);
+
+    &-header {
+      text-align: center;
+      max-width: $desktop-width;
+      margin: auto;
+    }
+    &-headshot {
+      $image-proportion: calc($large * $image-multiplier);
+      width: $image-proportion;
+      height: $image-proportion;
+      margin: rem-calc($x-large) auto;
+      border-radius: 50%;
+      border: solid 1px $off-white;
+      overflow: hidden;
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+
+      @media (min-width: $desktop-width) {
+        $image-proportion: calc($x-large * $image-multiplier);
+        width: $image-proportion;
+        height: $image-proportion;
+      }
+    }
+    &-info {
+      max-width: $desktop-width;
+      margin: auto;
+
+      display: flex;
+      flex-direction: column;
+      gap: rem-calc($small);
+    }
+
+    a {
+      color: $link-color;
+      text-decoration: underline;
+    }
+  }
+}

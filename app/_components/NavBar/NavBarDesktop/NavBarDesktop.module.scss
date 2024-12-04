@@ -1,0 +1,30 @@
+@import "../../../_styles/utilities/all";
+
+.NavBarDesktop {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  text-align: center;
+  background-color: $green-500;
+
+  &__link {
+    padding: rem-calc(16px) rem-calc(24px);
+
+    &:hover {
+      background-color: $green-400;
+      text-decoration: underline;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    &-active {
+      background-color: $green-400;
+      text-decoration: underline;
+    }
+  }
+}

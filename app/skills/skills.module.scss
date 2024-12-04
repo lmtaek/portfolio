@@ -1,0 +1,41 @@
+@import "../_styles/utilities/all";
+
+.Skills {
+  margin: auto;
+  // width: 100%;
+  //TODO: fine-tune max width across pages
+  max-width: rem-calc(calc($desktop-width + 100px));
+
+  &__header {
+    margin-bottom: rem-calc($large);
+  }
+  &__sections {
+    // max-width: rem-calc($desktop-width);
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+
+    gap: rem-calc($large);
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: repeat(2, auto);
+    }
+  }
+
+  &__section {
+    &__list {
+      display: flex;
+      flex: 1 0 auto;
+      gap: rem-calc($large);
+      align-items: center;
+      justify-content: space-evenly;
+      padding-top: rem-calc(calc($small / 2)) !important;
+      svg {
+        width: 100%;
+        height: auto;
+        max-width: 50%;
+        fill: $off-white;
+      }
+    }
+  }
+}

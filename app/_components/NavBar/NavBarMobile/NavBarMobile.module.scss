@@ -1,0 +1,63 @@
+@import "../../../_styles/utilities/all";
+
+.NavBarMobile__container {
+  position: fixed;
+  width: 100%;
+  background-color: $green-500;
+}
+
+.NavBarMobile {
+  overflow: hidden;
+  width: 100%;
+  height: 0px;
+  transition: all 0.5s;
+
+  background-color: $green-500;
+  font-size: rem-calc($large);
+  &-opened {
+    height: calc(100vh - $navbar-height);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: rem-calc(16px);
+
+    &__link {
+      padding: rem-calc($large) 0;
+      margin: 0 rem-calc($large);
+
+      border-bottom: 1px solid $off-white;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.NavBarMobile__button {
+  background-color: inherit;
+  color: inherit;
+  border: none;
+  padding-left: rem-calc(16px);
+
+  svg {
+    width: rem-calc($xx-large);
+    height: rem-calc($xx-large);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.NavBarMobile__button__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: $off-white;
+  min-height: rem-calc($navbar-height);
+  z-index: 100;
+}

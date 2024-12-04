@@ -1,95 +1,54 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
+import headshotImage from "./_assets/images/headshot.jpg";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <div className={styles["Home"]}>
+      <main className={styles["Home__content"]}>
+        <div className={styles["Home__content-header"]}>
+          <h1>Lauren Taekman</h1>
+          <h2>Hi, and welcome to my Portfolio!</h2>
+          <div className={styles["Home__content-headshot"]}>
+            <img
+              src={headshotImage.src}
+              alt="A headshot of Lauren Taekman standing in front of a garden backdrop"
+            ></img>
+          </div>
         </div>
+        <section className={styles["Home__content-info"]}>
+          <div>
+            <span>
+              I'm a Web Developer based in Durham, NC, with a passion for
+              creating high-quality, delightful experiences for users across a
+              variety of industries (including Commerce, Finance, and Media &
+              Entertainment).
+            </span>
+          </div>
+          <div>
+            With a background in both QA and Development, I'm able to offer
+            technical expertise for building a scalable project while keeping
+            checks and balances in place to ensure that the team is confident
+            when it's time to go live.
+          </div>
+          <div>
+            My career has been built on interdisciplinary collaboration, with
+            opportunities to work both domestically and internationally with
+            colleagues from all walks of life.
+          </div>
+          <div>
+            I'm always striving to keep up-to-date with industry standards, and
+            push initiatives forward regarding Web Accessibility.
+          </div>
+          <div>
+            If you have any questions or would like to know more, feel free to
+            contact me via{" "}
+            <a href="https://www.linkedin.com/in/lauren-taekman-509383191">
+              LinkedIn
+            </a>
+            .
+          </div>
+        </section>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }

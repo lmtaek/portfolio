@@ -1,0 +1,60 @@
+@import "./utilities/all";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+
+  //   max-width: 100vw;
+  //   overflow-x: hidden;
+
+  background-color: $green-300;
+}
+
+body {
+  font-family: var(--font-roboto-mono);
+  color: $off-white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  //   height: calc(100vh + 2 * $navbar-height);
+  //   height: 100vh;
+  display: flex;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  //   margin: 0 auto;
+  margin: $space-from-nav auto !important;
+  padding: 0 rem-calc($x-large);
+  max-width: rem-calc(1280px);
+  min-width: rem-calc(360px);
+
+  //   height: calc(100vh + ($navbar-height * 2));
+  //   height: calc(100% + ($navbar-height * 2));
+  //   margin-top: $space-from-nav !important;
+  //   //   margin-bottom: 200px;
+  //   margin-bottom: $space-from-nav !important;
+
+  flex: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  //   color: yellow;
+}
+
+ul > li:before,
+li::marker {
+  content: none;
+}
+
+h1 {
+  @include header-first;
+}

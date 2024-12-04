@@ -1,0 +1,42 @@
+// COLORS
+$green-100: #c2c5aa;
+$green-200: #a4ac86;
+$green-300: #656d4a;
+$green-400: #414833;
+$green-500: #333d29;
+
+$brown-100: #b6ad90;
+$brown-200: #a68a64;
+$brown-300: #936639;
+$brown-400: #7f4f24;
+$brown-500: #582f0e;
+
+$off-white: #edead0;
+
+$error-red: #a24936;
+$link-color: #ffee8c;
+
+// UNITS
+$rem-base: 16px;
+
+// FONTS
+$font-roboto-mono: var(--font-roboto-mono);
+$bold: 700;
+$regular: 400;
+$light: 200;
+
+// SPACING
+$x-small: 14px;
+$small: 16px;
+$medium: 18px;
+$medium-large: 20px;
+$large: 24px;
+$x-large: 32px;
+$xx-large: 40px;
+
+// COMPONENTS
+
+$navbar-height: 54px;
+$space-from-nav: calc($navbar-height + $x-large);
+
+$desktop-width: 780px;

@@ -1,0 +1,21 @@
+@import "../_styles/utilities/all";
+
+.Experience {
+  max-width: rem-calc($desktop-width);
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem-calc($large);
+    margin-bottom: rem-calc($large);
+  }
+
+  &__sections {
+    // max-width: rem-calc($desktop-width);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: rem-calc($large);
+  }
+}

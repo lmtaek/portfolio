@@ -1,0 +1,11 @@
+// Funtion used to transform PX to REM based on the root base
+@function rem-calc($pixels) {
+  @return #{calc($pixels / $rem-base)}rem;
+}
+
+@mixin border-style {
+  border: 1px solid $off-white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px 0 rgb(0 0 0 / 10%);
+}

@@ -1,0 +1,38 @@
+@import "../../_styles/utilities/all";
+
+.Card {
+  @include border-style;
+  height: 100%;
+  //   overflow: hidden;
+  //   box-shadow: 0 3px 10px 0 rgb(0 0 0 / 10%);
+
+  h2 {
+    padding: rem-calc(16px);
+    background-color: $green-400;
+    margin-bottom: rem-calc(calc($small / 2));
+  }
+
+  h4 {
+    font-style: italic;
+  }
+
+  ul {
+    font-size: $small;
+    li {
+      margin-left: rem-calc($small);
+
+      &::before,
+      &::marker {
+        content: unset;
+      }
+    }
+  }
+
+  div {
+    padding: 0 rem-calc($large);
+
+    &:last-of-type {
+      padding-bottom: rem-calc($small);
+    }
+  }
+}
